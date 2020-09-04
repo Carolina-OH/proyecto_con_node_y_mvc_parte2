@@ -34,3 +34,10 @@ input{
   background-color: darkslategray;
   color: white;
 }
+.lista{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-content:center;
+
+}
