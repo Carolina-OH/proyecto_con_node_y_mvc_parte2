@@ -12,6 +12,7 @@ router.get('/', async function(req, res, next) {
   var result = await userController.user_get(req, res, next);
   res.render('users', { result });
 });
+
 /* Post user  */
 router.post('/', function(req, res, next) { 
   userController.user_create(req, res, next);
