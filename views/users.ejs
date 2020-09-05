@@ -19,10 +19,15 @@
     </form>
  <div class="lista">
   <p>Usuarios Registrados</p>
-     <ul>
+    <ul>  
       <% result.forEach(function(user){ %>
-        <li><%= user.lastname %> <%= user.name %> </li>
-      <% }); %>
+        <%if (user.lastname.match(/ñ/gi)){
+        let lastname= user.lastname.replace(/ñ/gi,"nn")%>
+        <li><%=lastname %> <%= user.name %> </li>
+        <%} else { %>
+      <li><%= user.lastname %> <%= user.name %> </li>
+        <%}%>
+    <% }); %>
     </ul>
   </div>
 
