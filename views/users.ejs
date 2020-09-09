@@ -22,12 +22,13 @@
     <ul>  
       <% result.forEach(function(user){ %>
         <%if (user.lastname.match(/ñ/gi)){
-        let lastname= user.lastname.replace(/ñ/gi,"nn")%>
-        <li><%=lastname %> <%= user.name %> </li>
-        <%} else { %>
-      <li><%= user.lastname %> <%= user.name %> </li>
-        <%}%>
-    <% }); %>
+        var lastname= user.lastname.replace(/ñ/gi,"nn");
+        }else{
+          lastname=user.lastname
+        }%> 
+
+        <li><%=lastname %> <%= user.name %></li>
+   <% }); %> 
     </ul>
   </div>
 

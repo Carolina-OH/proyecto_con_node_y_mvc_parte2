@@ -18,8 +18,9 @@ exports.user_create = function(req, res, next) {
 
 exports.user_get = async function(req, res, next) {
 var users = await User.find({}).sort({lastname:1})
-
-return users;
-  //intento de validacion con ñ
+//var newUsers=users.map((user) => {
+ // user.lastname=user.lastname.replace("Ñ","nn");
+  return users
+//});
+//return newUsers.sort()
 }
-
